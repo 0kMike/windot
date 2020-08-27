@@ -1,6 +1,6 @@
 .container {
     width: 100%;
     background-color: var(--background-color-dark);
-    height: 150px;
+    height: 50px;
     position: sticky;
 }

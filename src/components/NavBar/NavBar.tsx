@@ -8,7 +8,7 @@ interface INavBar {
 const NavBar: React.FC = (props: INavBar) => {
     return (
         <div className={styles.container}>
-
+            hello
         </div>
     );
 }
