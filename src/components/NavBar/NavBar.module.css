@@ -1,25 +1,29 @@
 .container {
-    color: var(--color-text-accent);
-    display: flex;
-    flex-direction: row;
-    height: 50px;
-    justify-content: space-between;
-    position: sticky;
-    width: 100%;
+  color: var(--color-text-accent);
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  justify-content: space-between;
+  position: sticky;
+  width: 100%;
 }
 
 .pageTitle {
-    margin: 0 10px;
-    padding: 0;
-    font-size: 2.5em;
-    user-select: none;
+  margin: 0 10px;
+  padding: 0;
+  font-size: 2.5em;
+  user-select: none;
 }
 
 .menu {
-    margin: 0 10px;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    user-select: none;
+  margin: 0 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  user-select: none;
+}
+
+.settingsButton {
+  cursor: pointer;
 }
