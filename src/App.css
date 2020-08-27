@@ -1,46 +1,48 @@
 :root {
-  --background: #323232;
-  --bright: #c1c1c1;
-  --blue: #649df1;
-  --bluebright: #00a3e0;
-  --bluedark: #5461c8;
-  --cyandark: #00ab84;
-  --greenbright: #97d700;
-  --greendark: #006400;
-  --greenlight: #99aa77;
-  --greydark: #1c1c1c;
-  --greydark2: #3c3c3c;
-  --indigo: #3f51b5;
-  --orange: #ff6900;
-  --orangebright: #ff5733;
-  --orangeaccent: #f15025;
-  --orangedeep: #ff3d00;
-  --orangepapaja: #e56e43;
-  --purple: #c724b1;
-  --red: #e4002b;
-  --white: #eeeeee;
-  --yellow: #f6be00;
+    --background: #323232;
+    --blue: #649df1;
+    --bluebright: #00a3e0;
+    --bluedark: #5461c8;
+    --bright: #c1c1c1;
+    --cyandark: #00ab84;
+    --greenbright: #97d700;
+    --greendark: #006400;
+    --greenlight: #99aa77;
+    --greydark: #1c1c1c;
+    --greydark2: #3c3c3c;
+    --indigo: #3f51b5;
+    --orange: #ff6900;
+    --orangeaccent: #f15025;
+    --orangebright: #ff5733;
+    --orangedeep: #ff3d00;
+    --orangepapaja: #e56e43;
+    --purple: #c724b1;
+    --red: #e4002b;
+    --white: #eeeeee;
+    --yellow: #f6be00;
 
-  --background-color-dark: var(--greydark);
-  --background-color-light: var(--white);
-  --background-color-accent: var(--orangedeep);
-  --text-color-dark: var(--greydark);
-  --text-color-light: var(--white);
+    --color-background-accent: var(--orangedeep);
+    --color-background-dark: var(--greydark);
+    --color-background-light: var(--white);
+    --color-text-accent: var(--orangedeep);
+    --color-text-dark: var(--greydark);
+    --color-text-light: var(--white);
 }
 
 html, body {
-  padding: 0;
-  margin: 0;
-  color: var(--text-color-dark);
-  background-color: var(--background-color-dark);
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: Calibri, sans-serif;
+    font-family: Calibri, sans-serif;
+    overflow: hidden;
 }
 
 .App {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
+    height: 100vh;
+    width: 100vw;
 }

@@ -1,0 +1,20 @@
+.container {
+    margin: 0;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.container:hover {
+    animation-name: colorOrange;
+    animation-duration: 1s;
+}
+
+@keyframes colorOrange {
+    0% {
+
+    }
+    100% {
+        background-color: var(--color-background-accent);
+    }
+}

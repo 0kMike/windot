@@ -7,27 +7,27 @@ interface ILanguageContent{
 }
 
 const languagePhrases: ILanguageFile = {
-    EN: require('../i18n/EN.json'),
-    DE: require('../i18n/DE.json')
+    EN: require("../assets/i18n/EN.json"),
+    DE: require("../assets/i18n/DE.json"),
 };
 
 export const defaultLanguage = "EN";
 export let usedLanguage = defaultLanguage;
 
-export function getTranslation(phrase: string) {
+export function translate(phrase: string) {
     return languagePhrases[usedLanguage][phrase];
 }
 
-export function setUsedLanguage(lang: string) {
+export function setLanguage(lang: string) {
     usedLanguage = lang;
     localStorage.setItem("storedUserLanguage", usedLanguage);
 }
 
-export function loadCurrentLanguage() {
+export function loadLanguage() {
     const storedLanguage = localStorage.getItem("storedUserLanguage");
     if (storedLanguage) {
-        setUsedLanguage(storedLanguage);
+        setLanguage(storedLanguage);
     } else {
-        setUsedLanguage(defaultLanguage);
+        setLanguage(defaultLanguage);
     }
 }
