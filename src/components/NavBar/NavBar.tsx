@@ -3,13 +3,14 @@ import styles from "./NavBar.module.css"
 import {menuItems} from "../../provider/dataProvider"
 import NavBarItem from "./NavBarItem/NavBarItem";
 import Settings from "./Settings/Settings";
-import {defaultTheme} from "../../provider/themeProvider";
+import {theme} from "../../interfaces/ITheme";
 
-interface INavBar {
-
+interface INavBarProps {
+  usedTheme: theme,
+  setUsedTheme(theme: theme): void,
 }
 
-const NavBar: React.FC = (props: INavBar) => {
+const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
 
@@ -21,11 +22,7 @@ const NavBar: React.FC = (props: INavBar) => {
     });
   }
 
-  const toggleSettings = () => {
-    setShowSettings(!showSettings);
-  }
-
-  const svgColor = defaultTheme.accent
+  const svgColor = props.usedTheme.accentColor
   console.log(showSettings)
 
   return (
@@ -35,12 +32,12 @@ const NavBar: React.FC = (props: INavBar) => {
       </section>
       <section className={styles.menu}>
         {generateMenuItems()}
-        <div className={styles.settingsButton} onClick={toggleSettings}>
+        <div className={styles.settingsButton} onClick={() => setShowSettings(!showSettings)}>
           <svg xmlns="http://www.w3.org/2000/svg"
                viewBox="0 0 24 24"
                fill={svgColor}
-               width="25px"
-               height="25px">
+               width="20px"
+               height="20px">
             <g>
               <path d="M0,0h24v24H0V0z"
                     fill="none"/>
@@ -49,7 +46,7 @@ const NavBar: React.FC = (props: INavBar) => {
             </g>
           </svg>
         </div>
-        {showSettings && <Settings/>}
+        {showSettings && <Settings usedTheme={props.usedTheme}/>}
       </section>
     </nav>
   );

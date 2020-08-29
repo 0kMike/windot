@@ -1,25 +1,26 @@
-import React, {CSSProperties, useState} from 'react';
+import React, {CSSProperties, useEffect, useState} from 'react';
 import './App.css';
 import NavBar from "./components/NavBar/NavBar";
 import AnimationCircle from "./components/AnimationCircle/AnimationCircle";
-import {themeProvider, defaultTheme, currentTheme} from "./provider/themeProvider";
+import {accentColor, theme, baseColor} from "./interfaces/ITheme";
 
-const App: React.FC = () => {
+const App: React.FunctionComponent = () => {
 
-  const [theme, setTheme] = useState<themeProvider>(defaultTheme);
+  const [usedTheme, setUsedTheme] = useState<theme>(
+    {
+      baseColors: {background: baseColor.light, foreground: baseColor.dark},
+      accentColor: accentColor.orange
+    }
+  );
 
   const appBackgroundStyle: CSSProperties = {
-    backgroundColor: theme.background,
-    color: theme.foreground,
-  }
-
-  const applyTheme = () => {
-    setTheme({background: "#1c1c1c", foreground: "#eeeeee", accent: "#ff3d00"});
+    backgroundColor: usedTheme.baseColors.background,
+    color: usedTheme.baseColors.foreground,
   }
 
   return (
     <div className="App" style={appBackgroundStyle}>
-      <NavBar/>
+      <NavBar usedTheme={usedTheme} setUsedTheme={setUsedTheme}/>
       <AnimationCircle diameter={800} duration={80} opacity={50}/>
       <AnimationCircle diameter={500} duration={100} opacity={100}/>
     </div>

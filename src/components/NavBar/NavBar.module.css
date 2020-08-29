@@ -26,4 +26,11 @@
 
 .settingsButton {
   cursor: pointer;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  width: 20px;
+  height: 20px;
 }
