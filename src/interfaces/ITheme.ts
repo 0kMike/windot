@@ -10,12 +10,12 @@ export enum accentColor {
   yellow = "#f6be00"
 }
 
-interface themeColors {
+interface baseColors {
   background: baseColor,
   foreground: baseColor,
 }
 
 export interface theme {
-  baseColors: themeColors,
+  baseColors: baseColors,
   accentColor: accentColor
 }

@@ -1,4 +1,4 @@
-import React, {CSSProperties, useEffect, useState} from 'react';
+import React, {CSSProperties, useState} from 'react';
 import './App.css';
 import NavBar from "./components/NavBar/NavBar";
 import AnimationCircle from "./components/AnimationCircle/AnimationCircle";

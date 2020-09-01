@@ -23,7 +23,6 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
   }
 
   const svgColor = props.usedTheme.accentColor
-  console.log(showSettings)
 
   return (
     <nav className={styles.container}>
@@ -46,7 +45,7 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
             </g>
           </svg>
         </div>
-        {showSettings && <Settings usedTheme={props.usedTheme}/>}
+        {showSettings && <Settings usedTheme={props.usedTheme} setUsedTheme={props.setUsedTheme}/>}
       </section>
     </nav>
   );

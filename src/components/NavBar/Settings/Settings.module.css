@@ -6,31 +6,49 @@
   right: 10px;
   top: 50px;
   border-width: 1px;
-  box-shadow:  2px 2px 3px var(--color-background-dark);
+  box-shadow: 2px 2px 3px var(--color-background-dark);
   padding: 10px;
 }
 
 .option {
   display: flex;
   flex-direction: row;
-  justify-items: center;
+  justify-content: space-between;
   align-content: center;
+
+
 }
 
 .optionLabel {
   height: 20px;
-  margin: 0;
+  margin: 0 10px 0 0;
   padding: 0;
 
 }
 
 .optionButton {
-  height: 20px;
-  width: 20px;
-  margin: 0;
+  height: 15px;
+  width: 15px;
+  margin: 0 0 0 10px;
   padding: 0;
   border-radius: 50%;
   cursor: pointer;
   border-style: solid;
   border-width: 1px;
+}
+
+.accentButtonOrange{
+  border-color: var(--orangedeep);
+}
+
+.accentButtonBlue{
+  border-color: var(--blue);
+}
+
+.accentButtonCyan{
+  border-color: var(--cyandark);
+}
+
+.accentButtonYellow{
+  border-color: var(--yellow);
 }
