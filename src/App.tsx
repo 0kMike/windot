@@ -21,8 +21,8 @@ const App: React.FunctionComponent = () => {
   return (
     <div className="App" style={appBackgroundStyle}>
       <NavBar usedTheme={usedTheme} setUsedTheme={setUsedTheme}/>
-      <AnimationCircle diameter={800} duration={80} opacity={50}/>
-      <AnimationCircle diameter={500} duration={100} opacity={100}/>
+      <AnimationCircle usedTheme={usedTheme} diameter={800} duration={80} opacity={50}/>
+      <AnimationCircle usedTheme={usedTheme} diameter={500} duration={100} opacity={100}/>
     </div>
   );
 }

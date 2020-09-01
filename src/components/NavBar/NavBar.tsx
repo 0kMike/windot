@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {CSSProperties, useState} from "react";
 import styles from "./NavBar.module.css"
 import {menuItems} from "../../provider/dataProvider"
 import NavBarItem from "./NavBarItem/NavBarItem";
@@ -17,15 +17,19 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
   const generateMenuItems = () => {
     return menuItems.map((item, index) => {
       return (
-        <NavBarItem text={item.translation} key={index}/>
+        <NavBarItem text={item.translation} key={index} usedTheme={props.usedTheme}/>
       )
     });
+  }
+
+  const textColorStyle: CSSProperties = {
+    color: props.usedTheme.accentColor
   }
 
   const svgColor = props.usedTheme.accentColor
 
   return (
-    <nav className={styles.container}>
+    <nav className={styles.container} style={textColorStyle}>
       <section className={styles.pageTitle}>
         windot
       </section>

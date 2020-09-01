@@ -5,17 +5,17 @@
     padding: 10px;
 }
 
-.container:hover {
-    animation-name: colorOrange;
-    animation-duration: 1s;
-}
+/*.container:hover {*/
+/*    animation-name: colorOrange;*/
+/*    animation-duration: 1s;*/
+/*}*/
 
-@keyframes colorOrange {
-    0% {
+/*@keyframes colorOrange {*/
+/*    0% {*/
 
-    }
-    100% {
-        background-color: var(--color-background-accent);
-        color: var(--color-text-light);
-    }
-}
+/*    }*/
+/*    100% {*/
+/*        background-color: var(--color-background-accent);*/
+/*        color: var(--color-text-light);*/
+/*    }*/
+/*}*/
