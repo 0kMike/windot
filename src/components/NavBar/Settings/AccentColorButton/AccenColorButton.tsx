@@ -1,5 +1,5 @@
 import React, {CSSProperties} from "react";
-import styles from "./OptionButton.module.css";
+import styles from "./AccentColorButton.module.css";
 import {accentColor, baseColor, theme} from "../../../../interfaces/ITheme";
 
 interface IOptionButtonProps {
@@ -8,7 +8,7 @@ interface IOptionButtonProps {
   setUsedTheme(theme: theme): void,
 }
 
-const OptionButton: React.FunctionComponent<IOptionButtonProps> = (props) => {
+const AccenColorButton: React.FunctionComponent<IOptionButtonProps> = (props) => {
 
   const colorStyle: CSSProperties = props.usedTheme.accentColor === props.color ?
     {
@@ -34,4 +34,4 @@ const OptionButton: React.FunctionComponent<IOptionButtonProps> = (props) => {
   );
 }
 
-export default OptionButton;
+export default AccenColorButton;
