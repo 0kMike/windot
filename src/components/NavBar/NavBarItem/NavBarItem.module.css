@@ -3,6 +3,7 @@
     cursor: pointer;
     font-weight: bold;
     padding: 10px;
+    text-decoration: none;
 }
 
 /*.container:hover {*/

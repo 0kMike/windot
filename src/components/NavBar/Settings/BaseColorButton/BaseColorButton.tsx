@@ -1,10 +1,10 @@
 import React, {CSSProperties} from "react";
 import styles from "./BaseColorButton.module.css";
-import {baseColor, theme} from "../../../../interfaces/ITheme";
+import {baseColor, ITheme} from "../../../../interfaces/ITheme";
 
 interface IOptionButtonProps {
-  usedTheme: theme,
-  setUsedTheme(theme: theme): void,
+  usedTheme: ITheme,
+  setUsedTheme(theme: ITheme): void,
 }
 
 const BaseColorButton: React.FunctionComponent<IOptionButtonProps> = (props) => {

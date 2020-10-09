@@ -1,13 +1,13 @@
 import React, {CSSProperties} from "react";
 import styles from "./Settings.module.css";
-import {accentColor, baseColor, theme} from "../../../interfaces/ITheme";
+import {accentColor, baseColor, ITheme} from "../../../interfaces/ITheme";
 import {translate} from "../../../provider/languageProvider";
 import AccenColorButton from "./AccentColorButton/AccenColorButton";
 import BaseColorButton from "./BaseColorButton/BaseColorButton";
 
 interface ISettingsProps {
-  usedTheme: theme,
-  setUsedTheme(theme: theme): void,
+  usedTheme: ITheme,
+  setUsedTheme(theme: ITheme): void,
 }
 
 const Settings: React.FC<ISettingsProps> = (props) => {

@@ -15,7 +15,7 @@ interface baseColors {
   foreground: baseColor,
 }
 
-export interface theme {
+export interface ITheme {
   baseColors: baseColors,
   accentColor: accentColor
 }

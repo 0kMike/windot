@@ -1,31 +1,34 @@
 import React, {CSSProperties, useState} from "react";
 import styles from "./NavBarItem.module.css"
 import {translate} from "../../../provider/languageProvider";
-import {theme} from "../../../interfaces/ITheme";
+import {ITheme} from "../../../interfaces/ITheme";
+import {Link} from "react-router-dom";
 
 interface INavBarItemProps {
   text: string,
-  usedTheme: theme,
+  targetUrlPath: string,
+  usedTheme: ITheme,
 }
 
 const NavBarItem: React.FC<INavBarItemProps> = (props) => {
+  const {text, targetUrlPath, usedTheme} = props;
 
   const [hoverState, setHoverState] = useState<boolean>(false);
 
   const navBarItemStyle: CSSProperties = hoverState ?
     {
-      color: props.usedTheme.baseColors.background,
-      backgroundColor: props.usedTheme.accentColor,
+      color: usedTheme.baseColors.background,
+      backgroundColor: usedTheme.accentColor,
     } :
     {
-      color: props.usedTheme.accentColor,
+      color: usedTheme.accentColor,
     };
 
   return (
-    <div className={styles.container} style={navBarItemStyle} onMouseEnter={() => setHoverState(true)}
+    <Link to={targetUrlPath} className={styles.container} style={navBarItemStyle} onMouseEnter={() => setHoverState(true)}
          onMouseLeave={() => setHoverState(false)}>
-      {translate(props.text)}
-    </div>
+      {translate(text)}
+    </Link>
   );
 }
 

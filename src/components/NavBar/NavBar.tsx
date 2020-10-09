@@ -3,11 +3,12 @@ import styles from "./NavBar.module.css"
 import {menuItems} from "../../provider/dataProvider"
 import NavBarItem from "./NavBarItem/NavBarItem";
 import Settings from "./Settings/Settings";
-import {theme} from "../../interfaces/ITheme";
+import {ITheme} from "../../interfaces/ITheme";
 
 interface INavBarProps {
-  usedTheme: theme,
-  setUsedTheme(theme: theme): void,
+  usedTheme: ITheme,
+
+  setUsedTheme(theme: ITheme): void,
 }
 
 const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
@@ -17,7 +18,7 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
   const generateMenuItems = () => {
     return menuItems.map((item, index) => {
       return (
-        <NavBarItem text={item.translation} key={index} usedTheme={props.usedTheme}/>
+        <NavBarItem key={index} text={item.translation} targetUrlPath={item.targetUrlPath} usedTheme={props.usedTheme}/>
       )
     });
   }

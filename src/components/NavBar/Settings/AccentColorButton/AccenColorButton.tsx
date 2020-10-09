@@ -1,11 +1,11 @@
 import React, {CSSProperties} from "react";
 import styles from "./AccentColorButton.module.css";
-import {accentColor, baseColor, theme} from "../../../../interfaces/ITheme";
+import {accentColor, baseColor, ITheme} from "../../../../interfaces/ITheme";
 
 interface IOptionButtonProps {
   color: accentColor,
-  usedTheme: theme,
-  setUsedTheme(theme: theme): void,
+  usedTheme: ITheme,
+  setUsedTheme(theme: ITheme): void,
 }
 
 const AccenColorButton: React.FunctionComponent<IOptionButtonProps> = (props) => {
