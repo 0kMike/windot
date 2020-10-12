@@ -1,7 +1,7 @@
 import React, {CSSProperties} from "react";
 import styles from "./AnimationCircle.module.css"
 import {ITheme} from "../../interfaces/ITheme";
-import {IAbsolutePosition, verticalDirection} from "../../interfaces/IAbsolutePosition";
+import {horizontalDirection, IAbsolutePosition, verticalDirection} from "../../interfaces/IAbsolutePosition";
 
 interface IAnimationCircleProps {
   usedTheme: ITheme,
@@ -15,7 +15,7 @@ const AnimationCircle: React.FC<IAnimationCircleProps> = (props) => {
 
   const {usedTheme, diameter, duration, opacity, position} = props;
 
-  const inlineStyle: CSSProperties = {
+  const animationStyle: CSSProperties = {
     backgroundColor: usedTheme.accentColor,
     width: `${diameter}px`,
     height: `${diameter}px`,
@@ -23,22 +23,40 @@ const AnimationCircle: React.FC<IAnimationCircleProps> = (props) => {
     animationDuration: `${duration}s`,
   };
 
-  let positionStyle: CSSProperties = {
-  }
+  let verticalPositionStyle: CSSProperties = {
+    bottom: 0,
+  };
+  let horizontalPositionStyle: CSSProperties = {};
 
-  if (position.verticalDirection) {
-    switch (position.verticalDirection) {
-      case verticalDirection.top:
-        positionStyle = {top: `${position.verticalDistance}px`};
-        break;
-      case verticalDirection.bottom:
-        positionStyle = {bottom: `${position.verticalDistance}px`};
-        break;
+  const generatePosition = () => {
+
+    if (position.verticalDirection === verticalDirection.top) {
+      verticalPositionStyle = {
+        top: `${position.verticalDistance}`,
+      }
+    }
+    else {
+      verticalPositionStyle = {
+        bottom: `${position.verticalDistance}`,
+      }
+    }
+
+    if (position.horizontalDirection === horizontalDirection.left) {
+      horizontalPositionStyle = {
+        left: `${position.horizontalDistance}`,
+      }
+    }
+    else {
+      horizontalPositionStyle = {
+        right: `${position.horizontalDistance}`,
+      }
     }
   }
 
+  generatePosition();
+
   return (
-    <div className={styles.container} style={{...inlineStyle, ...positionStyle}}/>
+    <div className={styles.container} style={{...animationStyle, ...verticalPositionStyle, ...horizontalPositionStyle}}/>
   );
 }
 
