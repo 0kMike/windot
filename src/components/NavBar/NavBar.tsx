@@ -1,7 +1,5 @@
 import React, {CSSProperties, useState} from "react";
 import styles from "./NavBar.module.css"
-import {menuItems} from "../../provider/dataProvider"
-import NavBarItem from "./NavBarItem/NavBarItem";
 import Settings from "./Settings/Settings";
 import {ITheme} from "../../interfaces/ITheme";
 
@@ -15,14 +13,6 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
 
-  const generateMenuItems = () => {
-    return menuItems.map((item, index) => {
-      return (
-        <NavBarItem key={index} text={item.translation} targetUrlPath={item.targetUrlPath} usedTheme={props.usedTheme}/>
-      )
-    });
-  }
-
   const textColorStyle: CSSProperties = {
     color: props.usedTheme.accentColor
   }
@@ -31,11 +21,6 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
 
   return (
     <nav className={styles.container} style={textColorStyle}>
-      <section className={styles.pageTitle}>
-        windot
-      </section>
-      <section className={styles.menu}>
-        {generateMenuItems()}
         <div className={styles.settingsButton} onClick={() => setShowSettings(!showSettings)}>
           <svg xmlns="http://www.w3.org/2000/svg"
                viewBox="0 0 24 24"
@@ -51,7 +36,6 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
           </svg>
         </div>
         {showSettings && <Settings usedTheme={props.usedTheme} setUsedTheme={props.setUsedTheme}/>}
-      </section>
     </nav>
   );
 }

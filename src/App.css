@@ -40,10 +40,11 @@ html, body {
 body {
     font-family: Calibri, sans-serif;
     overflow: hidden;
+    user-select: none;
 }
 
 .App {
-display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;

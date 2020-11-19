@@ -12,7 +12,6 @@ const MainPage: React.FunctionComponent<IMainPageProps> = (props) => {
   const {usedTheme, setUsedTheme} = props;
   return (
     <div className={styles.container}>
-      <NavBar usedTheme={usedTheme} setUsedTheme={setUsedTheme}/>
       {props.children}
     </div>
   );

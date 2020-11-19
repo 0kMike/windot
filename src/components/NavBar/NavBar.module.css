@@ -1,35 +1,46 @@
 .container {
-  display: flex;
-  flex-direction: row;
-  height: 50px;
-  justify-content: space-between;
-  position: sticky;
-  width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: flex-end;
+    position: sticky;
+    width: 100%;
 }
 
 .pageTitle {
-  margin: 0 10px;
-  padding: 0;
-  font-size: 2.5em;
-  user-select: none;
+    margin: 0 10px;
+    padding: 0;
+    font-size: 2.5em;
+    user-select: none;
 }
 
 .menu {
-  margin: 0 10px;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  user-select: none;
+    margin: 0 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    user-select: none;
 }
 
 .settingsButton {
-  cursor: pointer;
-  padding: 10px;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  width: 20px;
-  height: 20px;
+    cursor: pointer;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+
+.settingsButton:hover {
+    transform: scale(1.5);
+    transition-duration: 0.5s;
+}
+
+@keyframes rotate360 {
+
+
 }
