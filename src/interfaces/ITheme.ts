@@ -1,8 +1,3 @@
-export enum baseColor {
-  dark = "#1c1c1c",
-  light = "#eeeeee"
-}
-
 export enum accentColor {
   orange = "#ff3d00",
   blue = "#649df1",
@@ -10,12 +5,6 @@ export enum accentColor {
   yellow = "#f6be00"
 }
 
-interface baseColors {
-  background: baseColor,
-  foreground: baseColor,
-}
-
 export interface ITheme {
-  baseColors: baseColors,
   accentColor: accentColor
 }
