@@ -3,7 +3,7 @@ import styles from "./AnimationCircle.module.css"
 import {ITheme} from "../../interfaces/ITheme";
 
 interface IAnimationCircleProps {
-  usedTheme: ITheme,
+  usedColorPalette: ITheme,
   diameter: number,
   duration: number,
   opacity: number,
@@ -11,10 +11,10 @@ interface IAnimationCircleProps {
 
 const AnimationCircle: React.FC<IAnimationCircleProps> = (props) => {
 
-  const {usedTheme, diameter, duration, opacity,} = props;
+  const {usedColorPalette, diameter, duration, opacity,} = props;
 
   const animationStyle: CSSProperties = {
-    backgroundColor: usedTheme.accentColor,
+    backgroundColor: usedColorPalette.accentColor,
     width: `${diameter}px`,
     height: `${diameter}px`,
     opacity: `${opacity}%`,

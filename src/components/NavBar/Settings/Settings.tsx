@@ -1,30 +1,29 @@
-import React from "react";
+import React, {CSSProperties} from "react";
 import styles from "./Settings.module.css";
-import {accentColor, ITheme} from "../../../interfaces/ITheme";
 import {translate} from "../../../provider/languageProvider";
-import AccenColorButton from "./AccentColorButton/AccenColorButton";
+import {IColorPalette} from "../../../interfaces/IColorPalette";
 
 interface ISettingsProps {
-  usedTheme: ITheme,
-  setUsedTheme(theme: ITheme): void,
+  usedColorPalette: IColorPalette,
+  setUsedColorPalette(colorPalette: IColorPalette): void,
   setShowSettings(isTrue: boolean): void,
 }
 
 const Settings: React.FC<ISettingsProps> = (props) => {
-  const {usedTheme, setUsedTheme, setShowSettings} = props;
+  const {usedColorPalette, setUsedColorPalette, setShowSettings} = props;
 
   const mouseLeaveHandler = () => {
     setShowSettings(false)
   }
 
+  const cssStyle: CSSProperties = {
+    backgroundColor: usedColorPalette.accentVariant1,
+  }
+
   return (
-    <div className={styles.container} onMouseLeave={mouseLeaveHandler}>
+    <div className={styles.container} style={cssStyle} onMouseLeave={mouseLeaveHandler}>
       <div className={styles.option}>
         <div className={styles.optionLabel}>{translate("settings_accentColor")}:</div>
-        <AccenColorButton color={accentColor.orange} usedTheme={usedTheme} setUsedTheme={setUsedTheme}/>
-        <AccenColorButton color={accentColor.blue} usedTheme={usedTheme} setUsedTheme={setUsedTheme}/>
-        <AccenColorButton color={accentColor.cyan} usedTheme={usedTheme} setUsedTheme={setUsedTheme}/>
-        <AccenColorButton color={accentColor.yellow} usedTheme={usedTheme} setUsedTheme={setUsedTheme}/>
       </div>
     </div>
   );

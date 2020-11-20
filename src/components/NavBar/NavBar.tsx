@@ -1,23 +1,23 @@
 import React, {CSSProperties, useState} from "react";
 import styles from "./NavBar.module.css"
 import Settings from "./Settings/Settings";
-import {ITheme} from "../../interfaces/ITheme";
+import {IColorPalette} from "../../interfaces/IColorPalette";
 
 interface INavBarProps {
-  usedTheme: ITheme,
-  setUsedTheme(theme: ITheme): void,
+  usedColorPalette: IColorPalette,
+  setUsedColorPalette(colorPalette: IColorPalette): void,
   showSettings: boolean,
   setShowSettings(isTrue: boolean): void,
 }
 
 const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
-  const {usedTheme, setUsedTheme, showSettings, setShowSettings} = props;
+  const {usedColorPalette, setUsedColorPalette, showSettings, setShowSettings} = props;
 
   const textColorStyle: CSSProperties = {
-    color: props.usedTheme.accentColor
+    color: props.usedColorPalette.text
   }
 
-  const svgColor = props.usedTheme.accentColor
+  const svgColor = props.usedColorPalette.accentMain
 
   return (
     <nav className={styles.container} style={textColorStyle}>
@@ -35,7 +35,7 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
             </g>
           </svg>
         </div>
-        {showSettings && <Settings usedTheme={usedTheme} setUsedTheme={setUsedTheme} setShowSettings={setShowSettings}/>}
+        {showSettings && <Settings usedColorPalette={usedColorPalette} setUsedColorPalette={setUsedColorPalette} setShowSettings={setShowSettings}/>}
     </nav>
   );
 }

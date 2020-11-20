@@ -1,5 +1,4 @@
 .container {
-  background-color: var(--color-background-dark-alt);
   border-style: none;
   display: flex;
   flex-direction: column;
