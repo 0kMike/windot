@@ -17,6 +17,7 @@ const App: React.FunctionComponent = () => {
       accentColor: accentColor.orange
     }
   );
+  const [showSettings, setShowSettings] = useState<boolean>(false);
 
   const appBackgroundStyle: CSSProperties = {
     backgroundColor: usedTheme.baseColors.background,
@@ -28,7 +29,7 @@ const App: React.FunctionComponent = () => {
       <BrowserRouter>
         <Route to={"/"}>
           <MainPage usedTheme={usedTheme} setUsedTheme={setUsedTheme}>
-            <NavBar usedTheme={usedTheme} setUsedTheme={setUsedTheme}/>
+            <NavBar usedTheme={usedTheme} setUsedTheme={setUsedTheme} showSettings={showSettings} setShowSettings={setShowSettings}/>
             <Content marginTop={100} color={usedTheme.baseColors.foreground}/>
             <AnimationCircle usedTheme={usedTheme} diameter={800} duration={80} opacity={50}/>
             <AnimationCircle usedTheme={usedTheme} diameter={500} duration={100} opacity={100}/>

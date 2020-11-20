@@ -23,6 +23,7 @@
 
     --color-background-accent: var(--orangedeep);
     --color-background-dark: var(--greydark);
+    --color-background-dark-alt: var(--greydark2);
     --color-background-light: var(--white);
     --color-text-accent: var(--orangedeep);
     --color-text-dark: var(--greydark);

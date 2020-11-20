@@ -5,13 +5,13 @@ import {ITheme} from "../../interfaces/ITheme";
 
 interface INavBarProps {
   usedTheme: ITheme,
-
   setUsedTheme(theme: ITheme): void,
+  showSettings: boolean,
+  setShowSettings(isTrue: boolean): void,
 }
 
 const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
-
-  const [showSettings, setShowSettings] = useState<boolean>(false);
+  const {usedTheme, setUsedTheme, showSettings, setShowSettings} = props;
 
   const textColorStyle: CSSProperties = {
     color: props.usedTheme.accentColor
@@ -25,8 +25,8 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
           <svg xmlns="http://www.w3.org/2000/svg"
                viewBox="0 0 24 24"
                fill={svgColor}
-               width="20px"
-               height="20px">
+               width="30px"
+               height="30px">
             <g>
               <path d="M0,0h24v24H0V0z"
                     fill="none"/>
@@ -35,7 +35,7 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
             </g>
           </svg>
         </div>
-        {showSettings && <Settings usedTheme={props.usedTheme} setUsedTheme={props.setUsedTheme}/>}
+        {showSettings && <Settings usedTheme={usedTheme} setUsedTheme={setUsedTheme} setShowSettings={setShowSettings}/>}
     </nav>
   );
 }
