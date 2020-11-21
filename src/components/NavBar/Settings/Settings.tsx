@@ -6,22 +6,18 @@ import {IColorPalette} from "../../../interfaces/IColorPalette";
 interface ISettingsProps {
   usedColorPalette: IColorPalette,
   setUsedColorPalette(colorPalette: IColorPalette): void,
-  setShowSettings(isTrue: boolean): void,
 }
 
 const Settings: React.FC<ISettingsProps> = (props) => {
-  const {usedColorPalette, setUsedColorPalette, setShowSettings} = props;
-
-  const mouseLeaveHandler = () => {
-    setShowSettings(false)
-  }
+  const {usedColorPalette, setUsedColorPalette} = props;
 
   const cssStyle: CSSProperties = {
-    backgroundColor: usedColorPalette.accentVariant1,
+    backgroundColor: usedColorPalette.backgroundAlt,
+    boxShadow: `0px 3px 6px ${usedColorPalette.accent}`,
   }
 
   return (
-    <div className={styles.container} style={cssStyle} onMouseLeave={mouseLeaveHandler}>
+    <div className={styles.container} style={cssStyle}>
       <div className={styles.option}>
         <div className={styles.optionLabel}>{translate("settings_accentColor")}:</div>
       </div>

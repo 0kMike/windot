@@ -4,10 +4,12 @@
     animation-delay: 0s;
     animation-iteration-count: unset;
     animation-timing-function: ease-in-out ;
+    text-align: left;
+    margin: 0;
 }
 
 .container:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
     transition-duration: 0.5s;
 }
 

@@ -14,10 +14,10 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
   const {usedColorPalette, setUsedColorPalette, showSettings, setShowSettings} = props;
 
   const textColorStyle: CSSProperties = {
-    color: props.usedColorPalette.text
+    color: props.usedColorPalette.backgroundAlt
   }
 
-  const svgColor = props.usedColorPalette.accentMain
+  const svgColor = props.usedColorPalette.accent
 
   return (
     <nav className={styles.container} style={textColorStyle}>
@@ -35,7 +35,7 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
             </g>
           </svg>
         </div>
-        {showSettings && <Settings usedColorPalette={usedColorPalette} setUsedColorPalette={setUsedColorPalette} setShowSettings={setShowSettings}/>}
+        {showSettings && <Settings usedColorPalette={usedColorPalette} setUsedColorPalette={setUsedColorPalette}/>}
     </nav>
   );
 }

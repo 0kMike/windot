@@ -13,7 +13,7 @@ const MainPage: React.FunctionComponent<IMainPageProps> = (props) => {
 
   const cssStyle: CSSProperties = {
     backgroundColor: usedColorPalette.background,
-    color: usedColorPalette.text
+    color: usedColorPalette.backgroundAlt
   }
 
   return (

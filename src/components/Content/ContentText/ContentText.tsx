@@ -11,9 +11,9 @@ const ContentText: React.FunctionComponent<IContentProps> = (props) => {
 
 
   return (
-    <div className={styles.container} style={{fontSize: `${textSize}px`}}>
+    <p className={styles.container} style={{fontSize: `${textSize}px`}}>
       {text}
-    </div>
+    </p>
   );
 }
 

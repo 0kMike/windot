@@ -1,7 +1,7 @@
 export interface IColorPalette {
     background: string;
+    backgroundAlt: string;
     text: string;
-    accentMain: string;
-    accentVariant1: string;
-    accentVariant2: string;
+    accent: string;
+    accentAlt: string;
 }

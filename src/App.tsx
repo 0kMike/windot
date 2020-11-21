@@ -5,6 +5,7 @@ import {BrowserRouter, Redirect, Route} from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import {IColorPalette} from "./interfaces/IColorPalette";
 import {colorPalletes} from "./provider/colorPaletteProvider";
+import AnimationCircle from "./components/AnimationCircle/AnimationCircle";
 
 const App: React.FunctionComponent = () => {
 
@@ -17,7 +18,7 @@ const App: React.FunctionComponent = () => {
 
   const appBackgroundStyle: CSSProperties = {
     backgroundColor: usedColorPalette.background,
-    color: usedColorPalette.text,
+    color: usedColorPalette.backgroundAlt,
   }
 
   return (
@@ -25,9 +26,9 @@ const App: React.FunctionComponent = () => {
       <BrowserRouter>
         <Route to={"/"}>
             <NavBar usedColorPalette={usedColorPalette} setUsedColorPalette={setUsedColorPalette} showSettings={showSettings} setShowSettings={setShowSettings}/>
-            <Content marginTop={100} color={usedColorPalette.text}/>
-            {/*<AnimationCircle usedColorPalette={usedColorPalette} diameter={800} duration={80} opacity={50}/>*/}
-            {/*<AnimationCircle usedColorPalette={usedColorPalette} diameter={500} duration={100} opacity={100}/>*/}
+            <Content marginTop={100} usedColorPalette={usedColorPalette}/>
+            <AnimationCircle usedColorPalette={usedColorPalette} diameter={800} duration={80} opacity={50}/>
+            <AnimationCircle usedColorPalette={usedColorPalette} diameter={500} duration={100} opacity={100}/>
         </Route>
       </BrowserRouter>
     </div>
