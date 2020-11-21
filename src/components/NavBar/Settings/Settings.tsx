@@ -4,16 +4,16 @@ import {translate} from "../../../provider/languageProvider";
 import {IColors} from "../../../interfaces/IColors";
 
 interface ISettingsProps {
-  usedColorPalette: IColors,
-  setUsedColorPalette(colorPalette: IColors): void,
+  colors: IColors,
+  setColors(colorPalette: IColors): void,
 }
 
 const Settings: React.FC<ISettingsProps> = (props) => {
-  const {usedColorPalette, setUsedColorPalette} = props;
+  const {colors, setColors} = props;
 
   const cssStyle: CSSProperties = {
-    backgroundColor: usedColorPalette.backgroundAlt,
-    boxShadow: `0px 3px 6px ${usedColorPalette.accent}`,
+    backgroundColor: colors.backgroundAlt,
+    boxShadow: `0px 3px 6px ${colors.accent}`,
   }
 
   return (

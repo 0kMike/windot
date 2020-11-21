@@ -5,14 +5,14 @@ import ContentText from "./ContentText/ContentText";
 
 interface IContentProps {
   marginTop: number
-  usedColorPalette: IColors,
+  colors: IColors,
 }
 
 const Content: React.FunctionComponent<IContentProps> = (props) => {
 
   const contentStyle: CSSProperties = {
     marginTop: `${props.marginTop}px`,
-    color: props.usedColorPalette.text,
+    color: props.colors.text,
   }
 
   return (
