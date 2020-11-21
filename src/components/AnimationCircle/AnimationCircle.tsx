@@ -1,9 +1,9 @@
 import React, {CSSProperties} from "react";
 import styles from "./AnimationCircle.module.css"
-import {IColorPalette} from "../../interfaces/IColorPalette";
+import {IColors} from "../../interfaces/IColors";
 
 interface IAnimationCircleProps {
-  usedColorPalette: IColorPalette,
+  usedColorPalette: IColors,
   diameter: number,
   duration: number,
   opacity: number,

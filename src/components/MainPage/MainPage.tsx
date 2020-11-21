@@ -2,10 +2,10 @@ import React, {CSSProperties} from "react";
 import styles from "./MainPage.module.css";
 import NavBar from "../NavBar/NavBar";
 import {ITheme} from "../../interfaces/ITheme";
-import {IColorPalette} from "../../interfaces/IColorPalette";
+import {IColors} from "../../interfaces/IColors";
 
 interface IMainPageProps {
-  usedColorPalette: IColorPalette,
+  usedColorPalette: IColors,
 }
 
 const MainPage: React.FunctionComponent<IMainPageProps> = (props) => {

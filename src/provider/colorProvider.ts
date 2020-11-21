@@ -1,6 +1,6 @@
-import {IColorPalette} from "../interfaces/IColorPalette";
+import {IColors} from "../interfaces/IColors";
 
-export const colorPalletes: IColorPalette[] = [
+export const colorPalletes: IColors[] = [
     {
         "background": "#0B5F73",
         "backgroundAlt":  "#1e7d87",

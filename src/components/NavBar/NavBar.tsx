@@ -1,11 +1,11 @@
 import React, {CSSProperties, useState} from "react";
 import styles from "./NavBar.module.css"
 import Settings from "./Settings/Settings";
-import {IColorPalette} from "../../interfaces/IColorPalette";
+import {IColors} from "../../interfaces/IColors";
 
 interface INavBarProps {
-  usedColorPalette: IColorPalette,
-  setUsedColorPalette(colorPalette: IColorPalette): void,
+  usedColorPalette: IColors,
+  setUsedColorPalette(colorPalette: IColors): void,
   showSettings: boolean,
   setShowSettings(isTrue: boolean): void,
 }

@@ -1,11 +1,11 @@
 import React, {CSSProperties} from "react";
 import styles from "./Settings.module.css";
 import {translate} from "../../../provider/languageProvider";
-import {IColorPalette} from "../../../interfaces/IColorPalette";
+import {IColors} from "../../../interfaces/IColors";
 
 interface ISettingsProps {
-  usedColorPalette: IColorPalette,
-  setUsedColorPalette(colorPalette: IColorPalette): void,
+  usedColorPalette: IColors,
+  setUsedColorPalette(colorPalette: IColors): void,
 }
 
 const Settings: React.FC<ISettingsProps> = (props) => {

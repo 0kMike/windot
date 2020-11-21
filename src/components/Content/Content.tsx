@@ -1,11 +1,11 @@
 import React, {CSSProperties} from "react";
 import styles from "./Content.module.css";
-import {IColorPalette} from "../../interfaces/IColorPalette";
+import {IColors} from "../../interfaces/IColors";
 import ContentText from "./ContentText/ContentText";
 
 interface IContentProps {
   marginTop: number
-  usedColorPalette: IColorPalette,
+  usedColorPalette: IColors,
 }
 
 const Content: React.FunctionComponent<IContentProps> = (props) => {
