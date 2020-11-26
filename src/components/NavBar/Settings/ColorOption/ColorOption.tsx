@@ -4,6 +4,7 @@ import {IColors} from "../../../../interfaces/IColors";
 
 interface IColorOptionProps {
   colors: IColors,
+  key: number,
 }
 
 const ColorOption: React.FunctionComponent<IColorOptionProps> = (props) => {

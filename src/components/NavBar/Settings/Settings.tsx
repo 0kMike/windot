@@ -29,7 +29,7 @@ const Settings: React.FC<ISettingsProps> = (props) => {
   return (
     <div className={styles.container} style={cssStyle}>
       <div className={styles.option}>
-        <div className={styles.optionLabel}>{translate("settings_accentColor")}:</div>
+        <div className={styles.optionLabel}>{translate("settings_accentColor")}</div>
         <div className={styles.column}>
           {generateColorOptions}
         </div>
