@@ -25,29 +25,9 @@
 
 }
 
-.optionButton {
-  height: 15px;
-  width: 15px;
-  margin: 0 0 0 10px;
+.column {
+  margin: 0;
   padding: 0;
-  border-radius: 50%;
-  cursor: pointer;
-  border-style: solid;
-  border-width: 1px;
-}
-
-.accentButtonOrange{
-  border-color: var(--orangedeep);
-}
-
-.accentButtonBlue{
-  border-color: var(--blue);
-}
-
-.accentButtonCyan{
-  border-color: var(--cyandark);
-}
-
-.accentButtonYellow{
-  border-color: var(--yellow);
+  display: flex;
+  flex-direction: column;
 }

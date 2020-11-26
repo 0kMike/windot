@@ -14,7 +14,7 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
   const {colors, setColors, showSettings, setShowSettings} = props;
 
   const textColorStyle: CSSProperties = {
-    color: props.colors.backgroundAlt
+
   }
 
   const svgColor = props.colors.accent

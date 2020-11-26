@@ -18,7 +18,7 @@ const App: React.FunctionComponent = () => {
 
   const appBackgroundStyle: CSSProperties = {
     backgroundColor: colors.background,
-    color: colors.backgroundAlt,
+    color: colors.text,
   }
 
   return (
