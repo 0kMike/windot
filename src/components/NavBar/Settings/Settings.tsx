@@ -14,7 +14,7 @@ const Settings: React.FC<ISettingsProps> = (props) => {
   const {colors, setColors} = props;
 
   const cssStyle: CSSProperties = {
-    backgroundColor: colors.backgroundAlt,
+    backgroundColor: colors.background,
     boxShadow: `0px 3px 6px ${colors.accent}`,
   }
 

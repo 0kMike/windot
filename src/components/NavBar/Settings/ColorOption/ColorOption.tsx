@@ -10,7 +10,7 @@ interface IColorOptionProps {
 const ColorOption: React.FunctionComponent<IColorOptionProps> = (props) => {
   const {colors} = props;
 
-  const colorArray: string[] = [colors.background, colors.backgroundAlt, colors.text, colors.accent, colors.accentAlt];
+  const colorArray: string[] = [colors.background, colors.text, colors.accent];
 
   const generateTiles =
     colorArray.map((item, index) => {
