@@ -14,14 +14,14 @@ const Settings: React.FC<ISettingsProps> = (props) => {
   const {colors, setColors} = props;
 
   const cssStyle: CSSProperties = {
-    backgroundColor: colors.background,
-    boxShadow: `0px 3px 6px ${colors.accent}`,
+    backgroundColor: colors.backgroundVariant,
+    boxShadow: `0px 3px 6px black`,
   }
 
   const generateColorOptions =
     colorPalettes.map((item, index) => {
       return (
-        <ColorOption colors={item} key={index}/>
+        <ColorOption colors={item} key={index} index={index} setColors={setColors}/>
       )
     })
 
