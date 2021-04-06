@@ -1,7 +1,10 @@
 {
   "home_welcome": "Hallo und willkommen!",
+  "home_legal": "Impressum",
   "settings_language": "Sprache",
   "settings_color": "Farbschema",
   "button_cv": "Lebenslauf ansehen",
-  "button_projects": "meine Projekte"
+  "button_projects": "meine Projekte",
+  "legal_header": "Impressum",
+  "legal_text": "Diese Webseite wird ausschließlich für private Zwecke genutzt. Daher sind auf dieser Webseite, gemäß dem §5 TMG (Telemediengesetz), keine Kontaktdaten erforderlich."
 }

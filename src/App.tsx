@@ -9,7 +9,7 @@ import AnimationCircle from "./components/AnimationCircle/AnimationCircle";
 import Button from './components/Content/Button/Button';
 import ButtonPanel from './components/Content/ButtonPanel/ButtonPanel';
 import ContentText from './components/Content/ContentText/ContentText';
-import { loadLanguage } from './provider/languageProvider';
+import { loadLanguage, translate } from './provider/languageProvider';
 
 const App: React.FunctionComponent = () => {
 
@@ -33,7 +33,7 @@ const App: React.FunctionComponent = () => {
         <Route exact path={"/"}>
             <NavBar colors={colors} setColors={setColors} showSettings={showSettings} setShowSettings={setShowSettings}/>
             <Content marginTop={100} colors={colors}>
-            <ContentText textSize={50} text={"Hello there and welcome!"}/>
+            <ContentText textSize={50} text={translate("home_welcome")}/>
             <ContentText textSize={20} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis odio eu massa commodo, vel aliquam mauris bibendum. Proin vitae quam purus. Suspendisse sollicitudin sapien vitae molestie convallis. Etiam lectus leo, pulvinar eget eros sed, cursus iaculis metus. Donec augue diam, volutpat id tellus sed, venenatis sollicitudin felis. Maecenas at ipsum gravida ante egestas hendrerit. Sed ultricies sagittis ante, at facilisis nisl rutrum at."}/>
               <ButtonPanel colors={colors}>
                 <Link to="/cv">
@@ -52,11 +52,18 @@ const App: React.FunctionComponent = () => {
             <AnimationCircle colors={colors} diameter={800} duration={80} opacity={50}/>
             <AnimationCircle colors={colors} diameter={500} duration={100} opacity={100}/>
         </Route>
+        <Route exact path={"/projects"}>
+            <NavBar colors={colors} setColors={setColors} showSettings={showSettings} setShowSettings={setShowSettings}/>
+            <Content marginTop={100} colors={colors}>
+            </Content>
+            <AnimationCircle colors={colors} diameter={800} duration={80} opacity={50}/>
+            <AnimationCircle colors={colors} diameter={500} duration={100} opacity={100}/>
+        </Route>
         <Route exact path={"/legal"}>
             <NavBar colors={colors} setColors={setColors} showSettings={showSettings} setShowSettings={setShowSettings}/>
             <Content marginTop={100} colors={colors}>
-            <ContentText textSize={50} text={"Legal Notice"}/>
-            <ContentText textSize={20} text={"This website is used for private purposes only. Therefore, according to § 5 TMG (German Teleservices Act), this website is not required to have any contact data available."}/>
+            <ContentText textSize={50} text={translate("home_legal")}/>
+            <ContentText textSize={20} text={translate("legal_text")}/>
             </Content>
             <AnimationCircle colors={colors} diameter={800} duration={80} opacity={50}/>
             <AnimationCircle colors={colors} diameter={500} duration={100} opacity={100}/>

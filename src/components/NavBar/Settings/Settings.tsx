@@ -4,6 +4,7 @@ import {supportedLanguages, translate} from "../../../provider/languageProvider"
 import {IColors} from "../../../interfaces/IColors";
 import {colorPalettes} from "../../../provider/colorProvider"
 import ColorOption from "./ColorOption/ColorOption";
+import LanguageOption from "./LanguageOption/LanguageOption";
 
 interface ISettingsProps {
   colors: IColors,
@@ -28,7 +29,7 @@ const Settings: React.FC<ISettingsProps> = (props) => {
     //TODO generate languageOptions from
   const generateLanguageOptions = 
   supportedLanguages.map((item, index) => {
-    return <div key={index}>{item}</div>;
+    return <LanguageOption key={index} language={item} index={index}/>;
   });
 
 
