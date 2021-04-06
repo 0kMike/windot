@@ -7,9 +7,7 @@ interface IButtonPanelProps {
 }
 
 const ButtonPanel: React.FunctionComponent<IButtonPanelProps> = (props) => {
-  return <div className={styles.container}>
-        {props.children}
-      </div>;
+  return <div className={styles.container}>{props.children}</div>;
 };
 
 export default ButtonPanel;

@@ -8,12 +8,6 @@
     margin: 0;
 }
 
-.container:hover {
-    transform: scale(1.01);
-    transition-duration: 0.5s;
-}
-
-
 @keyframes fadeIn {
     0% {
         opacity: 0;

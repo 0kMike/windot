@@ -1,5 +1,19 @@
 .container {
     display: flex;
-    width: 250px;
-    height: 100px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    height: 75px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 750;
+    cursor: pointer;
+    outline: none;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
 }

@@ -1,8 +1,7 @@
 {
-  "NavBar_language": "Sprache",
-  "NavBar_home": "Startseite",
-  "navBar_aboutMe": "About Me",
-  "navBar_projects": "Projects",
-  "settings_darkTheme": "Dark Theme",
-  "settings_accentColor": "Accent Color"
+  "home_welcome": "Hallo und willkommen!",
+  "settings_language": "Sprache",
+  "settings_color": "Farbschema",
+  "button_cv": "Lebenslauf ansehen",
+  "button_projects": "meine Projekte"
 }

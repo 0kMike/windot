@@ -1,4 +1,4 @@
-import React, {CSSProperties, useState} from "react";
+import React, {CSSProperties} from "react";
 import styles from "./NavBar.module.css"
 import Settings from "./Settings/Settings";
 import {IColors} from "../../interfaces/IColors";

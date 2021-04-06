@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { IColors } from "../../../interfaces/IColors";
 import styles from "./Button.module.css"
 
@@ -8,9 +8,14 @@ interface IButtonProps {
 }
 
 const Button: React.FunctionComponent<IButtonProps> = (props) => {
-  const {text} = props;
+  const {colors, text} = props;
 
-  return <input className={styles.container} type="button" value={text}>
+  const buttonStyle: CSSProperties = {
+    backgroundColor: colors.accent,
+    color: colors.backgroundVariant,
+  }
+
+  return <input type="button" className={styles.container} style={buttonStyle} value={text.toUpperCase()}>
 
   </input>;
 };
