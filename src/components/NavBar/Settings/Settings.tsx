@@ -24,25 +24,26 @@ const Settings: React.FC<ISettingsProps> = (props) => {
       return (
         <ColorOption colors={item} key={index} index={index} setColors={setColors}/>
       )
-    })
+    });
 
-    //TODO generate languageOptions from
   const generateLanguageOptions = 
-  supportedLanguages.map((item, index) => {
-    return <LanguageOption key={index} language={item} index={index}/>;
-  });
+    supportedLanguages.map((item, index) => {
+      return (
+      <LanguageOption key={index} language={item} index={index}/>
+      )
+    });
 
 
   return (
     <div className={styles.container} style={cssStyle}>
       <div className={styles.option}>
-        <div className={styles.optionLabel}>{translate("settings_color")}</div>
+        <div className={styles.optionLabel}>{translate("settings_color")}:</div>
         <div className={styles.column}>
           {generateColorOptions}
         </div>
       </div>
         <div className={styles.option}>
-        <div className={styles.optionLabel}>{translate("settings_language")}</div>
+        <div className={styles.optionLabel}>{translate("settings_language")}:</div>
         <div className={styles.column}>
           {generateLanguageOptions}
         </div>

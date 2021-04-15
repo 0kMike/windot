@@ -9,8 +9,6 @@ interface ILanguageContent {
 // Add new languages here
 export const supportedLanguages: string[] = ["EN", "DE", "KL"]
 
-
-//TODO generate from supportedLanguages
 const languagePhrases: ILanguageFile = {
     EN: require("../assets/i18n/EN.json"),
     DE: require("../assets/i18n/DE.json"),
@@ -18,7 +16,7 @@ const languagePhrases: ILanguageFile = {
 };
 
 export const defaultLanguage = supportedLanguages[0];
-export let usedLanguage = defaultLanguage;
+let usedLanguage = defaultLanguage;
 
 export function translate(phrase: string) {
     return languagePhrases[usedLanguage][phrase];
