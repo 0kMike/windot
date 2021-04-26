@@ -34,9 +34,9 @@ const App: React.FunctionComponent = () => {
     <div className="App" style={appBackgroundStyle}>
       <AnimationCircle colors={colors} diameter={800} duration={80} opacity={50}/>
       <AnimationCircle colors={colors} diameter={500} duration={100} opacity={100}/>
+      <NavBar colors={colors} setColors={setColors} showSettings={showSettings} setShowSettings={setShowSettings}/>
       <BrowserRouter>
         <Route exact path={"/"}>
-            <NavBar colors={colors} setColors={setColors} showSettings={showSettings} setShowSettings={setShowSettings}/>
             <Content marginTop={100} colors={colors}>
             <ContentText textSize={50} text={translate("home_welcome")}/>
             <ContentText textSize={20} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis odio eu massa commodo, vel aliquam mauris bibendum. Proin vitae quam purus. Suspendisse sollicitudin sapien vitae molestie convallis. Etiam lectus leo, pulvinar eget eros sed, cursus iaculis metus. Donec augue diam, volutpat id tellus sed, venenatis sollicitudin felis. Maecenas at ipsum gravida ante egestas hendrerit. Sed ultricies sagittis ante, at facilisis nisl rutrum at."}/>
@@ -49,17 +49,14 @@ const App: React.FunctionComponent = () => {
             </Content>
         </Route>
         <Route exact path={"/cv"}>
-            <NavBar colors={colors} setColors={setColors} showSettings={showSettings} setShowSettings={setShowSettings}/>
             <Content marginTop={100} colors={colors}>
             </Content>
         </Route>
         <Route exact path={"/projects"}>
-            <NavBar colors={colors} setColors={setColors} showSettings={showSettings} setShowSettings={setShowSettings}/>
             <Content marginTop={100} colors={colors}>
             </Content>
         </Route>
         <Route exact path={"/legal"}>
-            <NavBar colors={colors} setColors={setColors} showSettings={showSettings} setShowSettings={setShowSettings}/>
             <Content marginTop={100} colors={colors}>
             <ContentText textSize={50} text={translate("home_legal")}/>
             <ContentText textSize={20} text={translate("legal_text")}/>
