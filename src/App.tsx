@@ -10,6 +10,7 @@ import Button from './components/Content/Button/Button';
 import ButtonPanel from './components/Content/ButtonPanel/ButtonPanel';
 import ContentText from './components/Content/ContentText/ContentText';
 import { defaultLanguage, loadLanguage, translate, } from './provider/languageProvider';
+import { Footer } from './components/Footer/Footer';
 
 const App: React.FunctionComponent = () => {
 
@@ -28,8 +29,6 @@ const App: React.FunctionComponent = () => {
     color: colors.text,
   }
 
-//TODO texts for ContentText component need to be stored in language files under assets/i18n
-//TODO minimize code, e.g. AnimationCircle outside of router
   return (
     <div className="App" style={appBackgroundStyle}>
       <AnimationCircle colors={colors} diameter={800} duration={80} opacity={50}/>
@@ -62,6 +61,7 @@ const App: React.FunctionComponent = () => {
             <ContentText textSize={20} text={translate("legal_text")}/>
             </Content>
         </Route>
+        <Footer/>
       </BrowserRouter>
     </div>
   );
