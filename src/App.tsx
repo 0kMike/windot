@@ -46,14 +46,17 @@ const App: React.FunctionComponent = () => {
                 <Button text={translate("button_projects")} colors={colors}/>
               </ButtonPanel>
             </Content>
+            <Footer colors={colors}/>
         </Route>
         <Route exact path={"/cv"}>
             <Content marginTop={100} colors={colors}>
             </Content>
+            <Footer colors={colors}/>
         </Route>
         <Route exact path={"/projects"}>
             <Content marginTop={100} colors={colors}>
             </Content>
+            <Footer colors={colors}/>
         </Route>
         <Route exact path={"/legal"}>
             <Content marginTop={100} colors={colors}>
@@ -61,7 +64,6 @@ const App: React.FunctionComponent = () => {
             <ContentText textSize={20} text={translate("legal_text")}/>
             </Content>
         </Route>
-        <Footer/>
       </BrowserRouter>
     </div>
   );

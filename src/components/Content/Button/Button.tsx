@@ -15,9 +15,7 @@ const Button: React.FunctionComponent<IButtonProps> = (props) => {
     color: colors.backgroundVariant,
   }
 
-  return <input type="button" className={styles.container} style={buttonStyle} value={text.toUpperCase()}>
-
-  </input>;
+  return <input type="button" className={styles.container} style={buttonStyle} value={text.toUpperCase()}/>
 };
 
 export default Button;
