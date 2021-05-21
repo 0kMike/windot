@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar/NavBar";
 import {IColors} from "./interfaces/IColors";
 import {colorPalettes} from "./provider/colorProvider";
 import AnimationCircle from "./components/AnimationCircle/AnimationCircle";
-import Button from './components/Content/Button/BigButton';
+import Button from './components/Content/BigButton/BigButton';
 import ButtonPanel from './components/Content/ButtonPanel/ButtonPanel';
 import ContentText from './components/Content/ContentText/ContentText';
 import { defaultLanguage, loadLanguage, translate, } from './provider/languageProvider';
