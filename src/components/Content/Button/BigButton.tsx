@@ -1,6 +1,6 @@
 import React, { CSSProperties } from "react";
 import { IColors } from "../../../interfaces/IColors";
-import styles from "./Button.module.css"
+import styles from "./BigButton.module.css"
 
 interface IButtonProps {
     colors: IColors,

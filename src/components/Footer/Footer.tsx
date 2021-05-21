@@ -19,7 +19,7 @@ const footerButtonStyle: CSSProperties = {
     return (
         <footer className={styles.container}>
             <Link to="/legal">
-                <input type="button" value={translate("button_legal").toUpperCase()} className={styles.footerButton} style={footerButtonStyle}>
+                <input type="button" value={translate("button_legal").toLowerCase()} className={styles.footerButton} style={footerButtonStyle}>
                 </input>
             </Link>
             {props.children}

@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar/NavBar";
 import {IColors} from "./interfaces/IColors";
 import {colorPalettes} from "./provider/colorProvider";
 import AnimationCircle from "./components/AnimationCircle/AnimationCircle";
-import Button from './components/Content/Button/Button';
+import Button from './components/Content/Button/BigButton';
 import ButtonPanel from './components/Content/ButtonPanel/ButtonPanel';
 import ContentText from './components/Content/ContentText/ContentText';
 import { defaultLanguage, loadLanguage, translate, } from './provider/languageProvider';
@@ -41,9 +41,11 @@ const App: React.FunctionComponent = () => {
             <ContentText textSize={20} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis odio eu massa commodo, vel aliquam mauris bibendum. Proin vitae quam purus. Suspendisse sollicitudin sapien vitae molestie convallis. Etiam lectus leo, pulvinar eget eros sed, cursus iaculis metus. Donec augue diam, volutpat id tellus sed, venenatis sollicitudin felis. Maecenas at ipsum gravida ante egestas hendrerit. Sed ultricies sagittis ante, at facilisis nisl rutrum at."}/>
               <ButtonPanel colors={colors}>
                 <Link to="/cv">
-                <Button text={translate("button_cv")} colors={colors}/>
+                  <Button text={translate("button_cv")} colors={colors}/>
                 </Link>
-                <Button text={translate("button_projects")} colors={colors}/>
+                <Link to="/projects">
+                  <Button text={translate("button_projects")} colors={colors}/>
+                </Link>
               </ButtonPanel>
             </Content>
             <Footer colors={colors}/>
@@ -62,6 +64,13 @@ const App: React.FunctionComponent = () => {
             <Content marginTop={100} colors={colors}>
             <ContentText textSize={50} text={translate("home_legal")}/>
             <ContentText textSize={20} text={translate("legal_text")}/>
+            <ButtonPanel colors={colors}>
+
+
+              <p onClick={() => {window.history.back()}} style={{color: colors.accent}}>
+                {translate("button_back").toUpperCase}
+              </p>
+            </ButtonPanel>
             </Content>
         </Route>
       </BrowserRouter>
