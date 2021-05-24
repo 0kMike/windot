@@ -4,10 +4,11 @@ import styles from "./SmallButton.module.css";
 
 interface ISmallButtonProps {
     colors: IColors,
+    text: string,
 }
 
 const SmallButton: React.FunctionComponent<ISmallButtonProps> = (props) => {
-    const {colors} = props;
+    const {colors, text} = props;
 
     const smallButtonStyle: CSSProperties = {
         color: colors.accent,
@@ -15,7 +16,7 @@ const SmallButton: React.FunctionComponent<ISmallButtonProps> = (props) => {
     }
 
     return (
-        <input type="button" className={styles.container} style={smallButtonStyle}/>
+        <input type="button" className={styles.container} style={smallButtonStyle} value={text}/>
     )
 }
 
