@@ -2,16 +2,22 @@ import {IColors} from "../interfaces/IColors";
 
 export const colorPalettes: IColors[] = [
     {
-        "background": "#ffffff",
-        "backgroundVariant": "#ffaa77",
-        "text": "#1c1c1c",
-        "accent": "#ff3300",
+        "background": "#b3e7fc",
+        "backgroundVariant": "#2c2c2c",
+        "text": "#030303",
+        "accent": "#fb6100",
     },
     {
         "background": "#1c1c1c",
-        "backgroundVariant": "#aa5522",
+        "backgroundVariant": "#2c2c2c",
         "text": "#c1c1c1",
-        "accent": "#ff3300",
+        "accent": "#ff3d00",
+    },
+    {
+        "background": "#ffffff",
+        "backgroundVariant": "#c1c1c1",
+        "text": "#1c1c1c",
+        "accent": "#ff3d00",
     },
     {
         "background": "#0B5F73",

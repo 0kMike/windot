@@ -1,0 +1,15 @@
+.container {
+    position: absolute;
+    padding-left: 10px;
+    bottom: 0;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+}
+.footerButton {
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+}

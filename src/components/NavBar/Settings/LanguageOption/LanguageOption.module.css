@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    margin: 0 0 5px 0;
+}
+
+.container:hover {
+    transform: scale(1.2);
+}

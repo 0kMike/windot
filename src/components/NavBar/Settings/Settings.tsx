@@ -1,9 +1,10 @@
 import React, {CSSProperties} from "react";
 import styles from "./Settings.module.css";
-import {translate} from "../../../provider/languageProvider";
+import {supportedLanguages, translate} from "../../../provider/languageProvider";
 import {IColors} from "../../../interfaces/IColors";
 import {colorPalettes} from "../../../provider/colorProvider"
 import ColorOption from "./ColorOption/ColorOption";
+import LanguageOption from "./LanguageOption/LanguageOption";
 import LanguageSetting from "./LanguageSetting/LanguageSetting";
 
 interface ISettingsProps {
@@ -24,18 +25,31 @@ const Settings: React.FC<ISettingsProps> = (props) => {
       return (
         <ColorOption colors={item} key={index} index={index} setColors={setColors}/>
       )
-    })
+    });
+
+  const generateLanguageOptions = 
+    supportedLanguages.map((item, index) => {
+      return (
+      <LanguageOption key={index} language={item} index={index}/>
+      )
+    });
 
 
   return (
     <div className={styles.container} style={cssStyle}>
       <div className={styles.option}>
-        <div className={styles.optionLabel}>{translate("settings_accentColor")}</div>
+        <div className={styles.optionLabel}>{translate("settings_color")}:</div>
         <div className={styles.column}>
           {generateColorOptions}
         </div>
         <div className={styles.column}>
           <LanguageSetting/>
+        </div>
+      </div>
+        <div className={styles.option}>
+        <div className={styles.optionLabel}>{translate("settings_language")}:</div>
+        <div className={styles.column}>
+          {generateLanguageOptions}
         </div>
       </div>
     </div>
