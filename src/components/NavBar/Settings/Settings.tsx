@@ -4,6 +4,7 @@ import {translate} from "../../../provider/languageProvider";
 import {IColors} from "../../../interfaces/IColors";
 import {colorPalettes} from "../../../provider/colorProvider"
 import ColorOption from "./ColorOption/ColorOption";
+import LanguageSetting from "./LanguageSetting/LanguageSetting";
 
 interface ISettingsProps {
   colors: IColors,
@@ -32,6 +33,9 @@ const Settings: React.FC<ISettingsProps> = (props) => {
         <div className={styles.optionLabel}>{translate("settings_accentColor")}</div>
         <div className={styles.column}>
           {generateColorOptions}
+        </div>
+        <div className={styles.column}>
+          <LanguageSetting/>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@
     flex-direction: row;
     cursor: pointer;
     margin: 0 0 5px 0;
+    box-shadow: 2px 2px 3px #000000;
 }
 
 .container:hover {
